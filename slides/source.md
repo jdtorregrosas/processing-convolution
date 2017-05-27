@@ -37,12 +37,99 @@ H:
 
 H:
 
-## Goal
+## Goals
 
-*
-*
+* Comprehend the way that filters works, by studying the convolution matrix theory.
+* Design a Processing library to apply distinct filters to images and videos by using the convolution matrix.
+
+<img height='300' src='2emboss.jpg'/>
+
 H:
 ## Teory
+
+
+V:
+# Convolution
+* Convolution is the treatment of a matrix by another one which is called “kernel”.
+* The Convolution Matrix filter uses a first matrix which is the Image to be treated. The image is a bi-dimensional collection of pixels in rectangular coordinates. The used kernel depends on the effect you want.
+
+<img height='300' src='6zX2c.png'/>
+
+V:
+# Convolution
+The filter studies successively every pixel of the image. For each of them, which we will call the “initial pixel”, it multiplies the value of this pixel and values of the 8 surrounding pixels by the kernel corresponding value. Then it adds the results, and the initial pixel is set to this final result value.
+<img height='300' src='0example.png'/>
+
+V:
+# Convolution
+* Sharpen: 	
+<p><img height='300' src='sharpen2.jpg'/>
+
+			 `$\begin{bmatrix}
+			  0 & 0 & 0 & 0 & 0 \cr
+			  0 & 0 & -1 & 0 & 0 \cr
+			  0 & -1 & 5 & -1 & 0 \cr
+			  0 & 0 & -1 & 0 & 0 \cr
+			  0 & 0 & 0 & 0 & 0 \cr
+		 \end{bmatrix}
+			 $`
+	</p>
+
+V:
+# Convolution
+* Blur: 	
+<p><img height='300' src='blur.jpg'/>
+
+				 `$\begin{bmatrix}
+				  0 & 0 & 0 & 0 & 0 \cr
+				  0 & 1 & 1 & 1 & 0 \cr
+				  0 & 1 & 1 & 1 & 0 \cr
+				  0 & 1 & 1 & 1 & 0 \cr
+				  0 & 0 & 0 & 0 & 0 \cr
+			 \end{bmatrix}
+				 $`
+</p>
+
+V:
+# Convolution
+* Edge enhance: 	
+
+<p><img height='300' src='enhance.jpg'/>
+
+					 `$\begin{bmatrix}
+					  0 & 0 & 0 \cr
+					  -1 & 1 & 0 \cr
+					  0 & 0 & 0 \cr
+				 \end{bmatrix}
+					 $`
+</p>
+
+V:
+# Convolution
+* Edge detect: 	
+
+<p><img height='300' src='detect.jpg'/>
+
+					 `$\begin{bmatrix}
+					  0 & 1 & 0 \cr
+					  1 & -4 & 1 \cr
+					  0 & 1 & 0 \cr
+				 \end{bmatrix}
+					 $`
+</p>		
+V:
+# Convolution
+* Emboss: 	
+
+<p><img height='300' src='emboss.jpg'/>
+
+					 `$\begin{bmatrix}
+					  -2 & -1 & 0 \cr
+					  -1 & 1 & 1 \cr
+					  0 & 1 & 2 \cr
+				 \end{bmatrix}
+					 $`
+</p>		
 
 H:
 ## Design
