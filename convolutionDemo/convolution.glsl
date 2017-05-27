@@ -8,21 +8,18 @@ uniform vec2 texOffset;
 
 varying vec4 vertColor;
 varying vec4 vertTexCoord;
+uniform int divisor;
+uniform mat3 kernel;
 
-const vec4 lumcoeff = vec4(0.299, 0.587, 0.114, 0);
 
 void main() {
-  int divisor = 1;
-  int weight0 = -2;
-  int weight1 = -1;
-  int weight2 = 0;
-  int weight3 = -1;
-  int weight4 = 1;
-  int weight5 = 1;
-  int weight6 = 0;
-  int weight7 = 1;
-  int weight8 = 2;
-
+  /*
+  mat3 kernel = mat3(
+    1, 2, 1,
+    2, 4, 2,
+    1, 2, 1
+    );
+*/
   vec2 tc0 = vertTexCoord.st + vec2(-texOffset.s, -texOffset.t);
   vec2 tc1 = vertTexCoord.st + vec2(         0.0, -texOffset.t);
   vec2 tc2 = vertTexCoord.st + vec2(+texOffset.s, -texOffset.t);
@@ -43,6 +40,8 @@ void main() {
   vec4 col7 = texture2D(texture, tc7);
   vec4 col8 = texture2D(texture, tc8);
 
-  vec4 sum = (col0 * weight0 + col1 * weight1 + col2 * weight2 + col3 * weight3 + col4 * weight4 + col5 *weight5 + col6 *weight6 + col7 * weight7 + col8 * weight8)/divisor;
+  vec4 sum = (col0 * kernel[0][0] + col1 * kernel[0][1] + col2 * kernel[0][2] +
+     col3 * kernel[1][0] + col4 * kernel[1][1] + col5 * kernel[1][2] +
+     col6 * kernel[2][0] + col7 * kernel[2][1] + col8 * kernel[2][2]) / divisor;
   gl_FragColor = vec4(sum.rgb, 1.0) * vertColor;
 }
