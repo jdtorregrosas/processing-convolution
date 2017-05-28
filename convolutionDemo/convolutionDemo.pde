@@ -27,7 +27,7 @@ void setup() {
 }
 
 void draw() {
-  background(130,130,255);
+  background(158,207,179);
   /* Image */
   switch(filter){
     case Convolution.EDGE:
