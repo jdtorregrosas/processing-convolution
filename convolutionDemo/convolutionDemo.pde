@@ -12,22 +12,22 @@ void setup() {
   size(800, 600, P3D);
   c = new Convolution(this);
   myMovie = new Movie(this, "movie.mp4");
-  //myMovie.loop();
+  myMovie.loop();
   label = loadImage("flap.jpg");
   filter = Convolution.IDENTITY;
   cp5 = new ControlP5(this);
   List l = Arrays.asList("identity", "edge", "gaussian blur", "top sobel", "left sobel", "right sobel", "bottom sobel", "emboss", "sharpen");
   /* add a ScrollableList, by default it behaves like a DropdownList */
   cp5.addScrollableList("dropdown")
-     .setPosition(100, 100)
-     .setSize(200, 100)
-     .setBarHeight(20)
-     .setItemHeight(20)
+     .setPosition(width/8, height/8)
+     .setSize(6*width/8, 800)
+     .setBarHeight(40)
+     .setItemHeight(30)
      .addItems(l);
 }
 
 void draw() {
-  background(0);
+  background(130,130,255);
   /* Image */
   switch(filter){
     case Convolution.EDGE:
@@ -60,8 +60,9 @@ void draw() {
     default:
      c.identity();
   }
-  image(label, 0, height/4, 2 * width/4, 3 * height/4 );
-  image(myMovie, 2 * width/4, height/4, 2 * width/4, 3 * height/4 );
+  int border = 20;
+  image(label, 0 + border, height/4 + border, 2 * width/4 - 2 * border, 3 * height/4 -2*border);
+  image(myMovie, 2 * width/4 + border, height/4 + border, 2 * width/4 - 2 * border, 3 * height/4 -2 * border);
   c.removeShaders(); 
 }
 
