@@ -302,6 +302,6 @@ H:
 * [Convolution Matrix & Generic Filters](https://docs.gimp.org/en/plug-in-convmatrix.html)
 * [Image Kernels](http://setosa.io/ev/image-kernels/)
 * [Kernel - Image processing](https://en.wikipedia.org/wiki/Kernel_(image_processing)
-* [Saders - Processing](https://processing.org/tutorials/pshader/)
+* [Shaders - Processing](https://processing.org/tutorials/pshader/)
 * [ControlP5](http://www.sojamo.de/libraries/controlP5/)
 * [Fragment Shader](https://www.khronos.org/opengl/wiki/Fragment_Shader)
