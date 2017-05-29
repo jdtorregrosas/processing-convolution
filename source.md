@@ -28,7 +28,7 @@ H:
 ## Index
 
  1. Goal<!-- .element: class="fragment" data-fragment-index="1"-->
- 2. Teory<!-- .element: class="fragment" data-fragment-index="2"-->
+ 2. Theory<!-- .element: class="fragment" data-fragment-index="2"-->
  3. Design<!-- .element: class="fragment" data-fragment-index="3"-->
  4. Interaction<!-- .element: class="fragment" data-fragment-index="5"-->
  5. Demo<!-- .element: class="fragment" data-fragment-index="5"-->
@@ -45,7 +45,7 @@ H:
 <img height='300' src='2emboss.jpg'/>
 
 H:
-## Teory
+## Theory
 
 
 V:
