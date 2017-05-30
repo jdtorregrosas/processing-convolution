@@ -303,7 +303,7 @@ V:
 
 H:
 
-## Conclusions
+## Conclutions
 
 * Videos and images have a complex composition behind what we can see. The undertanding of it's computational representation give us a powerfull tool to work with this kind of media files.  
 * The use of Shaders provide as well a useful tool to get easier this kind of works as the implementation of image filters.
