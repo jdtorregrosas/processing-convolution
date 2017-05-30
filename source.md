@@ -32,8 +32,9 @@ H:
  3. Design<!-- .element: class="fragment" data-fragment-index="3"-->
  4. Interaction<!-- .element: class="fragment" data-fragment-index="5"-->
  5. Demo<!-- .element: class="fragment" data-fragment-index="5"-->
- 6. Conclusions<!-- .element: class="fragment" data-fragment-index="6"-->
- 7. Questions<!-- .element: class="fragment" data-fragment-index="7"-->
+ 6. Library<!-- .element: class="fragment" data-fragment-index="6"-->
+ 7. Conclusions<!-- .element: class="fragment" data-fragment-index="7"-->
+ 8. Questions<!-- .element: class="fragment" data-fragment-index="8"-->
 
 H:
 
@@ -279,6 +280,26 @@ V:
 
 <img aligns = "center" height='400' src='demo.jpg'/>
 <img aligns = "center" height='400' src='demo2.jpg'/>
+
+H:
+# Library
+V:
+## The processing-library-template for Eclipse
+* Describes how to set up a Processing Library project in Eclipse and build it successfully, and to make our librarys ready for distribution.
+* The template is available [here.](https://github.com/processing/processing-library-template)
+
+<img aligns = "center" height='200' src='p3logo.png'/>
+<img aligns = "center" height='200' src='eclipse.png'/>
+
+V:
+## Details
+* Import the core.jar from Processing.
+* Add "extends PApplet" to the public class.
+* In our case, import processing.opengl.
+* Define the build properties (classpath.local, classpath.libraries).
+* Tutorial available [here.](http://www.evsc.net/tech/hello-zeo-library)
+
+
 
 H:
 
